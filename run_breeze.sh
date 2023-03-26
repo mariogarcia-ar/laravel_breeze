@@ -1,5 +1,10 @@
 # -----------------------------------------------------------------------------
 # utils 
+# ctrl+t  -> buscar
+# ctrl+x  -> borrar linea
+
+# -----------------------------------------------------------------------------
+# utils 
 rm -rf vendor && rm -rf node_modules
 git stash --all && git stash drop && git prune && git checkout master
 rm -rf vendor && composer update 
@@ -34,3 +39,8 @@ php artisan make:controller Student/TimetableController
 
 git add -A && git commit -m "Studen module added"
 
+# add group auth in web.php
+# Route::middleware(['auth', 'verified'])->group(function () {
+
+
+git add -A && git commit -m "Studen module refactoring"
