@@ -2,6 +2,7 @@
 # utils 
 # ctrl+t  -> buscar
 # ctrl+x  -> borrar linea
+# ctrl+|  -> cierre brackets
 
 # -----------------------------------------------------------------------------
 # utils 
@@ -37,10 +38,20 @@ git add -A && git commit -m "Breeze installed"
 php artisan make:controller Student/TimetableController
 # add the route, view and menu item
 
-git add -A && git commit -m "Studen module added"
+git add -A && git commit -m "Student module added"
 
 # add group auth in web.php
 # Route::middleware(['auth', 'verified'])->group(function () {
 
 
-git add -A && git commit -m "Studen module refactoring"
+git add -A && git commit -m "Student module refactoring"
+
+php artisan make:model Role -m
+php artisan make:migration add_role_id_to_users_table
+# Role add name, constrint in relationship, and field in user model
+
+php artisan optimize:clear &&	php artisan config:clear
+php artisan db:wipe && 	php artisan migrate:refresh --seed
+
+git add -A && git commit -m "Student add Register Type,  "
+
