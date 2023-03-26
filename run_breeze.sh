@@ -9,7 +9,7 @@
 rm -rf vendor && rm -rf node_modules
 git stash --all && git stash drop && git prune && git checkout master
 rm -rf vendor && composer update 
-rm -rf node_modules && npm install && npm run production 
+rm -rf node_modules && npm install && npm run build
 editar .env
 php artisan optimize:clear &&	php artisan config:clear
 php artisan db:wipe && 	php artisan migrate:refresh --seed
@@ -55,3 +55,17 @@ php artisan db:wipe && 	php artisan migrate:refresh --seed
 
 git add -A && git commit -m "Student add Register Type,  "
 
+php artisan make:controller Teacher/TimetableController
+mkdir resources/views/teacher
+touch resources/views/teacher/timetable.blade.php
+
+# app/View/Components/AppLayout.php is the component element for layout
+# implements the extends for blade 
+
+# resources/views/layouts/student/navigation.blade.php
+# resources/views/layouts/teacher/navigation.blade.php
+# add new class , so you need to compile 
+
+rm -rf node_modules && npm install && npm run build
+
+git add -A && git commit -m "Student/Teacher, we created 2 layout one for student and another for teacher  "

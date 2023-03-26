@@ -16,11 +16,8 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('student.timetable')" :active="request()->routeIs('student.timetable')">
-                        {{ __('Time Table') }}
-                    </x-nav-link>   
-                    <x-nav-link :href="route('teacher.timetable')" :active="request()->routeIs('teacher.timetable')">
-                        {{ __('Time Table') }}
-                    </x-nav-link>                    
+                        {{ __('Time Table student') }}
+                    </x-nav-link>                 
                 </div>
  
             </div>
@@ -79,9 +76,6 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('student.timetable')" :active="request()->routeIs('student.timetable')">
                 {{ __('Time Table') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('teacher.timetable')" :active="request()->routeIs('teacher.timetable')">
-                {{ __('Time Table teacher') }}
             </x-responsive-nav-link>
         </div>
 

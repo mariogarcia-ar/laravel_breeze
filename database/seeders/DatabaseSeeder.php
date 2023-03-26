@@ -22,6 +22,13 @@ class DatabaseSeeder extends Seeder
             'role_id' => 2
         ]);
 
+        \App\Models\User::factory()->create([
+            'name' => 'Alumno',
+            'email' => 'alumno@example.com',
+            'password' => bcrypt('87654321'),
+            'role_id' => 2
+        ]);
+
         \App\Models\User::factory(10)->create([
             'password' => bcrypt('87654321'),            
         ]);
