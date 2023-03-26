@@ -13,17 +13,11 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('Dashboard Admin') }}
                     </x-nav-link>
                     <x-nav-link :href="route('student.timetable')" :active="request()->routeIs('student.timetable')">
-                        {{ __('Time Table Student') }}
-                    </x-nav-link>   
-                    <x-nav-link :href="route('teacher.timetable')" :active="request()->routeIs('teacher.timetable')">
-                        {{ __('Time Table Teacher') }}
-                    </x-nav-link>   
-                    <x-nav-link :href="route('admin.users')" :active="request()->routeIs('admin.users')">
-                        {{ __('Admin Users') }}
-                    </x-nav-link>                    
+                        {{ __('Time Table student') }}
+                    </x-nav-link>                 
                 </div>
  
             </div>
@@ -82,12 +76,6 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('student.timetable')" :active="request()->routeIs('student.timetable')">
                 {{ __('Time Table') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('teacher.timetable')" :active="request()->routeIs('teacher.timetable')">
-                {{ __('Time Table teacher') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('admin.users')" :active="request()->routeIs('admin.users')">
-                {{ __('Users admin') }}
             </x-responsive-nav-link>
         </div>
 
